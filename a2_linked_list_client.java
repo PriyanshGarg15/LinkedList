@@ -11,6 +11,7 @@ public class a2_linked_list_client {
 		ll.AddLast(90);
 		ll.Display();
 
+		
 	}
 }
 
