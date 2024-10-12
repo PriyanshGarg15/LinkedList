@@ -1,5 +1,5 @@
 public class a1_linked_list_class {
-	class Node {
+	public class Node {
 		int data;
 		Node next;
 	}
@@ -57,22 +57,32 @@ public class a1_linked_list_class {
 
 	}
 
+	private Node GetNode(int k) throws Exception {
+		if (k < 0 || k >= size) {
+			throw new Exception("Bklol index range me dedo");
+		}
+		Node temp = head;
+		for (int i = 0; i < k; i++) {
+			temp = temp.next;
+
+		}
+		return temp;
+
+	}
+
 	// O(1)
 	public int getfirst() {
 		return head.data;
-
 	}
 
 	// O(1)
 	public int getlast() {
 		return tail.data;
-
 	}
 
 	// O(n)
 	public int getindex(int k) throws Exception {
 		return GetNode(k).data;
-
 	}
 
 	// O(1)
@@ -140,19 +150,7 @@ public class a1_linked_list_class {
 
 	}
 
-	private Node GetNode(int k) throws Exception {
-		if (k < 0 || k >= size) {
-			throw new Exception("Bklol index range me dedo");
-
-		}
-		Node temp = head;
-		for (int i = 0; i < k; i++) {
-			temp = temp.next;
-
-		}
-		return temp;
-
-	}
+	
 
 	public int size() {
 		return size;
